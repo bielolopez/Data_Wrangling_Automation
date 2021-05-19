@@ -3,5 +3,5 @@ Sys.setenv(SPARK_HOME='/home/bielo/spark-2.4.7-bin-hadoop2.7')
 Sys.setenv(PATH=paste(Sys.getenv(c('PATH')), '/home/bielo/spark-2.4.7-bin-hadoop2.7/bin', sep = ':'))
 
 library(SparkR, lib.loc = c(file.path(Sys.getenv("SPARK_HOME"), "R", "lib")))
-sparkR.session(master="local[*]", enableHiveSupport=FALSE, sparkConfig = list(spark.driver.memory = "1g",
+sparkR.session(master="local[*]", enableHiveSupport=FALSE, sparkConfig = list(spark.driver.memory = "16g",
                                                                               spark.sql.warehouse.dir="/home/bielo/spark-2.4.7-bin-hadoop2.7/"))
